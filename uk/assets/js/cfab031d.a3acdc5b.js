@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjest_website=self.webpackChunkjest_website||[]).push([[8191],{31722:e=>{e.exports=JSON.parse('{"permalink":"/jest/uk/blog","page":1,"postsPerPage":10,"totalPages":3,"totalCount":21,"nextPage":"/jest/uk/blog/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
