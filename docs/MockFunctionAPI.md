@@ -645,6 +645,42 @@ test('returns correct data', () => {
 
 Types of classes, functions or objects can be passed as type argument to `jest.Mocked<Source>`. If you prefer to constrain the input type, use: `jest.MockedClass<Source>`, `jest.MockedFunction<Source>` or `jest.MockedObject<Source>`.
 
+For example, to mock an instance method, there are two solutions tested for **TypeScript version 3.x and 4.x**, both are 
+casting desired function
+
+1. **Use jest.MockedFunction**
+
+   ```typescript
+   import * as dep from './dependency';
+
+   jest.mock('./dependency');
+
+   const mockMyFunction = dep.myFunction as jest.MockedFunction<typeof dep.myFunction>;
+   ```
+   
+2. **Use jest.Mock**
+
+   ```typescript
+    import * as dep from './dependency';
+    
+    jest.mock('./dependency');
+    
+    const mockMyFunction = dep.default as jest.Mock;
+   ```
+
+There is no difference between these two solutions, although the second approach appears simpler. Both casting solutions 
+allows to call any jest mock function on `mockMyFunction` such as `mockReturnValue` or `mockResolvedValue`:
+
+```typescript
+mockMyFunction.mockReturnValue('value');
+```
+
+`mockMyFunction` can also be used normally for expect
+
+```typescript
+expect(mockMyFunction).toHaveBeenCalledTimes(1);
+```
+
 ### `jest.Replaced<Source>`
 
 The `jest.Replaced<Source>` utility type returns the `Source` type wrapped with type definitions of Jest [replaced property](#replaced-properties).
