@@ -383,7 +383,7 @@ class Index extends React.Component {
                       based on how long test files take.
                     </Translate>
                   ),
-                  image: '/img/content/feature-fast.png',
+                  image: 'img/content/feature-fast.png',
                   imageAlign: 'left',
                   title: <Translate>Fast and safe</Translate>,
                 },
@@ -404,7 +404,7 @@ class Index extends React.Component {
                       from entire projects, including untested files.
                     </Translate>
                   ),
-                  image: '/img/content/feature-coverage.png',
+                  image: 'img/content/feature-coverage.png',
                   imageAlign: 'right',
                   title: <Translate>Code coverage</Translate>,
                 },
@@ -428,7 +428,7 @@ class Index extends React.Component {
                       calls with readable test syntax.
                     </Translate>
                   ),
-                  image: '/img/content/feature-mocking.png',
+                  image: 'img/content/feature-mocking.png',
                   imageAlign: 'left',
                   title: <Translate>Easy Mocking</Translate>,
                 },
@@ -446,7 +446,7 @@ class Index extends React.Component {
                       Here are some examples:
                     </Translate>
                   ),
-                  image: '/img/content/matchers/toBe.png',
+                  image: 'img/content/matchers/toBe.png',
                   imageAlign: 'right',
                   title: <Translate>Great Exceptions</Translate>,
                 },
