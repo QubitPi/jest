@@ -88,6 +88,19 @@ it('We can check if the consumer called a method on the class instance', () => {
 });
 ```
 
+:::caution "JestJS TypeScript: mockImplementation Does not Exist on Type"
+
+If we are testing TypeScript, we will see such error unless we convince Typescript that this is a jest Mock object by using something like `const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>`:
+
+```typescript
+import SoundPlayer from './sound-player';
+
+jest.mock('./sound-player'); // SoundPlayer is now a mock constructor
+const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>; // Add this line in case of TypeScript
+```
+
+:::
+
 ### Manual mock
 
 Create a [manual mock](ManualMocks.md) by saving a mock implementation in the `__mocks__` folder. This allows you to specify the implementation, and it can be used across test files.
@@ -330,6 +343,25 @@ it('custom methods are called', () => {
   expect(getterMethodMock).toHaveBeenCalled();
 });
 ```
+
+:::caution TypeScript
+
+In the case of testing TypeScript, instead of using `spyOn`, use `Object.defineProperty`:
+
+```typescript
+import SoundPlayer from './sound-player';
+
+jest.mock('./sound-player');
+const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>;
+
+Object.defineProperty(MockedSoundPlayer.prototype, 'foo', {
+  get() {
+    return 'testBar';
+  },
+});
+```
+
+:::
 
 ## Keeping track of usage (spying on the mock)
 
