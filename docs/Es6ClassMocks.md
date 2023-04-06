@@ -90,14 +90,13 @@ it('We can check if the consumer called a method on the class instance', () => {
 
 :::caution "JestJS TypeScript: mockImplementation Does not Exist on Type"
 
-If we are testing TypeScript, we will see such error unless we convince Typescript that this is a jest Mock object by
-using something like `const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>`:
+If we are testing TypeScript, we will see such error unless we convince Typescript that this is a jest Mock object by using something like `const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>`:
 
 ```typescript
 import SoundPlayer from './sound-player';
 
 jest.mock('./sound-player'); // SoundPlayer is now a mock constructor
-const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer> // Add this line in case of TypeScript
+const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>; // Add this line in case of TypeScript
 ```
 
 :::
@@ -353,9 +352,13 @@ In the case of testing TypeScript, instead of using `spyOn`, use `Object.defineP
 import SoundPlayer from './sound-player';
 
 jest.mock('./sound-player');
-const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>
+const MockedSoundPlayer = SoundPlayer as jest.Mock<SoundPlayer>;
 
-Object.defineProperty(MockedSoundPlayer.prototype, 'foo', { get(){ return "testBar"; } });
+Object.defineProperty(MockedSoundPlayer.prototype, 'foo', {
+  get() {
+    return 'testBar';
+  },
+});
 ```
 
 :::
