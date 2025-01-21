@@ -6,18 +6,14 @@
 name: Documentation Release
 
 'on':
+  pull_request:
   push:
     branches:
       - master
 
 jobs:
-  test:
-    uses: ./.github/workflows/doc-test.yml
-    secrets: inherit
-
   deploy-documentation:
     name: Deploy Documentation to GitHub Pages
-    needs: test
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -39,10 +35,12 @@ jobs:
           node fetchSupporters.js
       - name: Build documentation
         run: yarn build
+      - name: Load CNAME
+        run: echo jest.qubitpi.org > ./build/CNAME
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
           user_name: QubitPi
-          user_email: jack20191124@proton.me
+          user_email: jack20220723@gmail.com
