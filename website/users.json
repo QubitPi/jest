@@ -3,32 +3,32 @@
   "users": [
     {
       "caption": "Facebook",
-      "image": "img/logos/facebook.png",
+      "image": "/img/logos/facebook.png",
       "infoLink": "https://www.facebook.com"
     },
     {
       "caption": "Twitter",
-      "image": "img/logos/twitter.png",
+      "image": "/img/logos/twitter.png",
       "infoLink": "https://www.twitter.com"
     },
     {
       "caption": "The New York Times",
-      "image": "img/logos/nyt.png",
+      "image": "/img/logos/nyt.png",
       "infoLink": "http://www.nytimes.com/"
     },
     {
       "caption": "Spotify",
-      "image": "img/logos/spotify.png",
+      "image": "/img/logos/spotify.png",
       "infoLink": "https://www.spotify.com"
     },
     {
       "caption": "Airbnb",
-      "image": "img/logos/airbnb.png",
+      "image": "/img/logos/airbnb.png",
       "infoLink": "https://www.airbnb.com/"
     },
     {
       "caption": "Instagram",
-      "image": "img/logos/instagram.png",
+      "image": "/img/logos/instagram.png",
       "infoLink": "https://www.instagram.com/"
     }
   ]
