@@ -125,31 +125,31 @@ export function setupLandingAnimation() {
     const buttons = [
       {
         title: 'toBe',
-        url: 'img/content/matchers/toBe.png',
+        url: '/img/content/matchers/toBe.png',
       },
       {
         title: 'toBeCloseTo',
-        url: 'img/content/matchers/toBeCloseTo.png',
+        url: '/img/content/matchers/toBeCloseTo.png',
       },
       {
         title: 'toEqual',
-        url: 'img/content/matchers/toEqual.png',
+        url: '/img/content/matchers/toEqual.png',
       },
       {
         title: 'toStrictEqual',
-        url: 'img/content/matchers/toStrictEqual.png',
+        url: '/img/content/matchers/toStrictEqual.png',
       },
       {
         title: 'toHaveProperty',
-        url: 'img/content/matchers/toHaveProperty.png',
+        url: '/img/content/matchers/toHaveProperty.png',
       },
       {
         title: 'toMatchSnapshot',
-        url: 'img/content/matchers/toMatchSnapshot.png',
+        url: '/img/content/matchers/toMatchSnapshot.png',
       },
       {
         title: 'toThrowError',
-        url: 'img/content/matchers/toThrowError.png',
+        url: '/img/content/matchers/toThrowError.png',
       },
     ];
 
