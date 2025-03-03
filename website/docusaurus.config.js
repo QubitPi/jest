@@ -162,7 +162,7 @@ const config = {
       announcementBar: {
         id: 'support_ukraine',
         content:
-          'Support Ukraine 🇺🇦 <a target="_blank" rel="noopener noreferrer" href="https://opensource.facebook.com/support-ukraine"> Help Provide Humanitarian Aid to Ukraine</a>.',
+          '⚠️ This site (jest.qubitpi.org) is NOT the official Jest documentation and is used for the purpose of personal study only! The official Jest documentation is at <a target="_blank" rel="noopener noreferrer" href="https://jestjs.io/">jestjs.io</a>. ⚠️',
         backgroundColor: '#20232a',
         textColor: '#fff',
         isCloseable: false,
