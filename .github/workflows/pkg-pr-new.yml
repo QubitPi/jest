@@ -29,4 +29,5 @@ jobs:
         run: yarn build
 
       - name: Publish
+        if: ${{ github.repository_owner != 'QubitPi' }}
         run: yarn dlx pkg-pr-new publish './packages/*' --compact
